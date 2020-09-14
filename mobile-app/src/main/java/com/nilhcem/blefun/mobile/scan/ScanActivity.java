@@ -2,12 +2,10 @@ package com.nilhcem.blefun.mobile.scan;
 
 import android.Manifest;
 import android.app.Activity;
-import android.app.AlertDialog;
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
 import android.bluetooth.BluetoothManager;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
@@ -22,11 +20,8 @@ import android.view.MenuItem;
 import android.widget.Toast;
 
 import com.nilhcem.blefun.mobile.R;
-import com.nilhcem.blefun.mobile.SwtichActivity;
 import com.nilhcem.blefun.mobile.interact.InteractActivity;
-import com.nilhcem.blefun.mobile.interact.InteractActivity2;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -81,27 +76,27 @@ public class ScanActivity extends AppCompatActivity {
             stopLeScan();
         }
     };
-    boolean authMac= false;
-    private List<String> MACsAutorizadas = Arrays.asList("18:93:D7:11:E6:68","A4:DA:32:67:8D:8A");
+    boolean authMac = false;
+    private List<String> MACsAutorizadas = Arrays.asList("18:93:D7:11:E6:68", "A4:DA:32:67:8D:8A");
 
     /**
      * Agregar pantalla de scanear y atorizar las mac con contraseña predeterminada
      * lista de macs autorizadas en base de datos local
-     *   Buscar que datos necesitamos para generar las estadisticas, y estas guardalas en local y luego subirlas a la nube
+     * Buscar que datos necesitamos para generar las estadisticas, y estas guardalas en local y luego subirlas a la nube
      */
 
     private void isMacAddressAutorized(final BluetoothDevice device) {
-        boolean ExistonList= false;
-        for(int i=0;i<MACsAutorizadas.size();i++){
-            if(MACsAutorizadas.get(i).toString().equals(device.getAddress())){
-                ExistonList=true;
+        boolean ExistonList = false;
+        for (int i = 0; i < MACsAutorizadas.size(); i++) {
+            if (MACsAutorizadas.get(i).toString().equals(device.getAddress())) {
+                ExistonList = true;
             }
         }
-         if(ExistonList) {
-              startInteractActivity(device);
-         }else{
-                Toast.makeText(getApplicationContext(), "MAC No Autorizada en lista", Toast.LENGTH_SHORT).show();
-         }
+        if (ExistonList) {
+            startInteractActivity(device);
+        } else {
+            Toast.makeText(getApplicationContext(), "MAC No Autorizada en lista", Toast.LENGTH_SHORT).show();
+        }
 
     }
 
@@ -225,23 +220,12 @@ public class ScanActivity extends AppCompatActivity {
     }
 
     private void startInteractActivity(BluetoothDevice device) {
-        String clase = getIntent().getStringExtra("clase");
-        if(clase.equals("1")){
-            Intent intent = null;
-                intent = new Intent(this, InteractActivity.class);
-                intent.putExtra(InteractActivity.EXTRA_DEVICE_ADDRESS, device.getAddress());
-                //aqui ya tenemos la mac
-                startActivity(intent);
-                finish();
-
-        }else if(clase.equals("2")){
-            Intent intent = null;
-                intent = new Intent(this, InteractActivity2.class);
-                intent.putExtra(InteractActivity2.EXTRA_DEVICE_ADDRESS, device.getAddress());
-                //aqui ya tenemos la mac
-                startActivity(intent);
-                finish();
-        }
+        Intent intent = null;
+        intent = new Intent(this, InteractActivity.class);
+        intent.putExtra(InteractActivity.EXTRA_DEVICE_ADDRESS, device.getAddress());
+        //aqui ya tenemos la mac
+        startActivity(intent);
+        finish();
 
     }
 }
