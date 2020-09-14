@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Seleccion">
+
+    <ImageView
+        android:layout_marginTop="@dimen/dimen_30"
+        android:id="@+id/boton_uno"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:clickable="true"
+        android:onClick="botonUno"
+        app:srcCompat="@drawable/uno" />
+    <!--Con las siguientes dos declaraciones se hace un onclick implicito sin necesidad de conectar por java el boton-->
+    <!-- android:clickable="true"
+        android:onClick="nombre del metodo o accion"
+        -->
+    <ImageView
+        android:clickable="true"
+        android:onClick="botonDos"
+        android:layout_marginTop="@dimen/dimen_30"
+        android:id="@+id/boton_dos"
+        android:layout_width="170dp"
+        android:layout_height="170dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/boton_uno"
+        app:srcCompat="@drawable/dos" />
+</android.support.constraint.ConstraintLayout>
