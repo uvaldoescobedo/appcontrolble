@@ -82,7 +82,7 @@ public class ScanActivity extends AppCompatActivity {
         }
     };
     boolean authMac= false;
-    private List<String> MACsAutorizadas = Arrays.asList("18:93:D7:11:E6:68","18:93:B7:11:E6:67");
+    private List<String> MACsAutorizadas = Arrays.asList("18:93:D7:11:E6:68","A4:DA:32:67:8D:8A");
 
     /**
      * Agregar pantalla de scanear y atorizar las mac con contraseña predeterminada
