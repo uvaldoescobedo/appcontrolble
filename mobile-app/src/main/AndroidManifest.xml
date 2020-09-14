@@ -14,9 +14,8 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".scan.ScanActivity"></activity>
         <activity android:name=".SwtichActivity" />
-        <activity android:name=".Seleccion">
+        <activity android:name=".scan.ScanActivity">
             <!-- se agrega intent -filter a activity principal o por default y solamente hay uno por aplicacion-->
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -24,7 +23,6 @@
             </intent-filter>
         </activity>
         <activity android:name=".interact.InteractActivity" />
-        <activity android:name=".interact.InteractActivity2" />
     </application>
 
 </manifest>
