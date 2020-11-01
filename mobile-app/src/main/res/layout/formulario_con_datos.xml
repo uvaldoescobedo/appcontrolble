@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="500dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/dimen_30">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:elevation="@dimen/dimen_30"
+                android:gravity="center_horizontal"
+                android:text="Datos del Paciente"
+                android:textColor="@color/text_color"
+                android:textSize="25dp" />
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:layout_editor_absoluteX="41dp"
+                tools:layout_editor_absoluteY="169dp">
+
+                <android.support.design.widget.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusable="false"
+                    android:hint="Nombre"
+                    android:inputType="textPersonName"
+                    android:textColor="@color/text_color"
+                    android:textColorHint="@color/hint_color_gray" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:layout_editor_absoluteX="41dp"
+                tools:layout_editor_absoluteY="169dp">
+
+                <android.support.design.widget.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusable="false"
+                    android:hint="Apellido Paterno"
+                    android:inputType="textPersonName"
+                    android:textColor="@color/text_color"
+                    android:textColorHint="@color/hint_color_gray" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:layout_editor_absoluteX="41dp"
+                tools:layout_editor_absoluteY="169dp">
+
+                <android.support.design.widget.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusable="false"
+                    android:hint="Apellido Materno"
+                    android:inputType="textPersonName"
+                    android:textColor="@color/text_color"
+                    android:textColorHint="@color/hint_color_gray" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/textInputLayout3"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:focusable="false"
+                        android:hint="Edad"
+                        android:inputType="textPersonName"
+                        android:textColor="@color/text_color"
+                        android:textColorHint="@color/hint_color_gray" />
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/textInputLayout2"
+                    android:layout_width="150dp"
+                    android:layout_marginStart="@dimen/dimen_30"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toEndOf="@+id/textInputLayout3"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:focusable="false"
+                        android:hint="Sexo"
+                        android:inputType="textPersonName"
+                        android:textColor="@color/text_color"
+                        android:textColorHint="@color/hint_color_gray" />
+                </android.support.design.widget.TextInputLayout>
+
+
+            </android.support.constraint.ConstraintLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:layout_editor_absoluteX="41dp"
+                tools:layout_editor_absoluteY="169dp">
+
+                <android.support.design.widget.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusable="false"
+                    android:hint="Fecha de Nacimiento"
+                    android:inputType="textPersonName"
+                    android:textColor="@color/text_color"
+                    android:textColorHint="@color/hint_color_gray" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:layout_editor_absoluteX="41dp"
+                tools:layout_editor_absoluteY="169dp">
+
+                <android.support.design.widget.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusable="false"
+                    android:hint="Folio - Matricula - Afiliacion"
+                    android:inputType="textPersonName"
+                    android:textColor="@color/text_color"
+                    android:textColorHint="@color/hint_color_gray" />
+            </android.support.design.widget.TextInputLayout>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:elevation="@dimen/dimen_30"
+                android:gravity="center_horizontal"
+                android:text="Area de Cirugia"
+                android:textColor="@color/text_color"
+                android:textSize="25dp" />
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:layout_editor_absoluteX="41dp"
+                tools:layout_editor_absoluteY="169dp">
+
+                <android.support.design.widget.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusable="false"
+                    android:hint="Nombre del Cirujano"
+                    android:inputType="textPersonName"
+                    android:textColor="@color/text_color"
+                    android:textColorHint="@color/hint_color_gray" />
+            </android.support.design.widget.TextInputLayout>
+
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:layout_editor_absoluteX="41dp"
+                tools:layout_editor_absoluteY="169dp">
+
+                <android.support.design.widget.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusable="false"
+                    android:hint="Anesteciologo"
+                    android:inputType="textPersonName"
+                    android:textColor="@color/text_color"
+                    android:textColorHint="@color/hint_color_gray" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:layout_editor_absoluteX="41dp"
+                tools:layout_editor_absoluteY="169dp">
+
+                <android.support.design.widget.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusable="false"
+                    android:hint="Enfermera Cirlulante"
+                    android:inputType="textPersonName"
+                    android:textColor="@color/text_color"
+                    android:textColorHint="@color/hint_color_gray" />
+            </android.support.design.widget.TextInputLayout>
+
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:layout_editor_absoluteX="41dp"
+                tools:layout_editor_absoluteY="169dp">
+
+                <android.support.design.widget.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusable="false"
+                    android:hint="Enfermera Instrumentista"
+                    android:inputType="textPersonName"
+                    android:textColor="@color/text_color"
+                    android:textColorHint="@color/hint_color_gray" />
+            </android.support.design.widget.TextInputLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/floatingActionButton2"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:clickable="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/scrollView2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_arrow_back_black_24dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Regresar"
+        android:textColor="@color/hint_color_gray"
+        app:layout_constraintEnd_toEndOf="@+id/floatingActionButton2"
+        app:layout_constraintStart_toStartOf="@+id/floatingActionButton2"
+        app:layout_constraintTop_toBottomOf="@+id/floatingActionButton2"></TextView>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/floatingActionBut"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:backgroundTint="#4CAF50"
+        android:clickable="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/scrollView2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_flecha" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CONFIRMAR"
+        android:textColor="@color/hint_color_gray"
+        app:layout_constraintEnd_toEndOf="@+id/floatingActionBut"
+        app:layout_constraintStart_toStartOf="@+id/floatingActionBut"
+        app:layout_constraintTop_toBottomOf="@+id/floatingActionBut"></TextView>
+
+</android.support.constraint.ConstraintLayout>

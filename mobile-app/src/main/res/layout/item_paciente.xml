@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="300dp"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/label_paciente"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Paciente"
+        android:textSize="20dp"
+        android:textColor="@color/text_color"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"></TextView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nombre:"
+        android:textSize="17dp"
+        android:textColor="@color/hint_color_gray"
+        android:id="@+id/labe_name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/label_paciente"/>
+
+    <TextView
+        android:id="@+id/txt_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="5dp"
+        android:text="nombre + Apellido + apllido :"
+        android:textColor="@color/text_color"
+        android:textSize="17dp"
+        app:layout_constraintStart_toEndOf="@+id/labe_name"
+        app:layout_constraintTop_toBottomOf="@+id/label_paciente" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Edad:"
+        android:textSize="17dp"
+        android:textColor="@color/hint_color_gray"
+        android:id="@+id/label_edad"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_name"/>
+
+    <TextView
+        android:id="@+id/txt_edad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="5dp"
+        android:text="00"
+        android:textColor="@color/text_color"
+        android:textSize="17dp"
+        app:layout_constraintStart_toEndOf="@+id/label_edad"
+        app:layout_constraintTop_toBottomOf="@+id/txt_name" />
+
+    <TextView
+        android:id="@+id/label_fechanac"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fecha de Nacimiento"
+        android:textColor="@color/hint_color_gray"
+        android:textSize="17dp"
+        app:layout_constraintStart_toEndOf="@+id/txt_edad"
+        app:layout_constraintTop_toBottomOf="@+id/txt_name" />
+
+    <TextView
+        android:id="@+id/txt_nac"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="5dp"
+        android:text="00/00/0000"
+        android:textColor="@color/text_color"
+        android:textSize="17dp"
+        app:layout_constraintStart_toEndOf="@+id/label_fechanac"
+        app:layout_constraintTop_toBottomOf="@+id/txt_name" />
+</android.support.constraint.ConstraintLayout>

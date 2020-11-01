@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white_color"
+    tools:context=".llenado_formulario">
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="500dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/dimen_30">
+            <TextView
+                android:layout_width="match_parent"
+                android:text="Datos del Paciente"
+                android:textSize="25dp"
+                android:textColor="@color/text_color"
+                android:elevation="@dimen/dimen_30"
+                android:gravity="center_horizontal"
+                android:layout_height="wrap_content"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Nombre"
+                android:inputType="textPersonName"
+                android:textColor="@color/text_color"
+                android:textColorHint="@color/hint_color_gray"></EditText>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Apellido Paterno"
+                    android:inputType="textPersonName"
+                    android:textColor="@color/text_color"
+                    android:textColorHint="@color/hint_color_gray"></EditText>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="Apellido Materno"
+                    android:inputType="textPersonName"
+                    android:textColor="@color/text_color"
+                    android:textColorHint="@color/hint_color_gray"></EditText>
+
+                <EditText
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:hint="Edad"
+                    android:inputType="number"
+                    android:textColor="@color/text_color"
+                    android:textColorHint="@color/hint_color_gray"></EditText>
+            </LinearLayout>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Folio - Matricula - Afiliacion"
+                android:inputType="textPersonName"
+                android:textColor="@color/text_color"
+                android:textColorHint="@color/hint_color_gray"></EditText>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:focusable="false"
+                android:hint="Fecha de Nacimiento"
+                android:textColor="@color/text_color"
+                android:textColorHint="@color/hint_color_gray"
+                android:tooltipText="sadfsadf"></EditText>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="  Sexo:"
+                android:layout_height="wrap_content"/>
+            <Spinner
+                android:id="@+id/sexo"
+                android:background="@color/color_men"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:text="Area de Cirugia"
+                android:textSize="25dp"
+                android:textColor="@color/text_color"
+                android:elevation="@dimen/dimen_30"
+                android:gravity="center_horizontal"
+                android:layout_height="wrap_content"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Nombre del Cirujano"
+                android:inputType="textPersonName"
+                android:textColor="@color/text_color"
+                android:textColorHint="@color/hint_color_gray"></EditText>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Anesteciologo"
+                android:inputType="textPersonName"
+                android:textColor="@color/text_color"
+                android:textColorHint="@color/hint_color_gray"></EditText>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Enfermera Cirlulante"
+                android:inputType="textPersonName"
+                android:textColor="@color/text_color"
+                android:textColorHint="@color/hint_color_gray"></EditText>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Enfermera Instrumentista"
+                android:inputType="textPersonName"
+                android:textColor="@color/text_color"
+                android:textColorHint="@color/hint_color_gray"></EditText>
+            <Button
+                android:layout_marginTop="15dp"
+                android:text="REGISTRAR"
+                android:id="@+id/btn_registrar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+    </ScrollView>
+</android.support.constraint.ConstraintLayout>
