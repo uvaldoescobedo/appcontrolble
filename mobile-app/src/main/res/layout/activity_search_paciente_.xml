@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Search_paciente_Activity">
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/dimen_30">
+
+                <LinearLayout
+                    android:id="@+id/linear_txt_to_search"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <EditText
+                        android:id="@+id/txt_to_search"
+                        android:layout_width="300dp"
+                        android:layout_height="@dimen/margin_48"
+                        android:backgroundTint="@color/hint_color_gray"
+                        android:drawableStart="@drawable/ic_search"
+                        android:drawableTint="@color/hint_color_gray"
+                        android:hint="Nombre del Paciente"
+                        android:inputType="text"
+                        android:textColor="@color/text_color"
+                        android:textColorHint="@color/hint_color_gray"
+                        android:textSize="16sp" />
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:background="#E5ECEB"
+                        android:elevation="@dimen/margin_8"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/button_filter"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:background="@drawable/ic_search"
+                            android:backgroundTint="@color/hint_color_gray"
+                            app:layout_constraintStart_toEndOf="@+id/linear_txt_to_search"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:layout_width="match_parent"
+                tools:listitem="@layout/item_paciente"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+    </ScrollView>
+
+
+
+    <ImageView
+        android:id="@+id/btn_formulario"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:backgroundTint="#4CAF50"
+        android:clickable="true"
+        android:onClick="onclic_to_formulario"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/scrollView2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_formulario" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rellenar\nFormulario"
+        android:textColor="@color/hint_color_gray"
+        app:layout_constraintEnd_toEndOf="@+id/btn_formulario"
+        app:layout_constraintStart_toStartOf="@+id/btn_formulario"
+        app:layout_constraintTop_toBottomOf="@+id/btn_formulario"></TextView>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/btn_back"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:clickable="true"
+        android:onClick="onclic_to_Back"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/scrollView2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_arrow_back_black_24dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Regresar"
+        android:textColor="@color/hint_color_gray"
+        app:layout_constraintEnd_toEndOf="@+id/btn_back"
+        app:layout_constraintStart_toStartOf="@+id/btn_back"
+        app:layout_constraintTop_toBottomOf="@+id/btn_back"></TextView>
+
+
+</android.support.constraint.ConstraintLayout>
